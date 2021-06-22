@@ -24,6 +24,15 @@ $data = ambildata($conn,$query);
                             </tr>
                         </thead>
                         <tbody>
+                            <?php if($data == null){  
+                                
+                                echo "<tr>";
+                                echo "<td> kosong </td>";
+                                echo "</tr>";
+                                
+                            ?>
+                            <?php 
+                            } else { ?>
                             <?php foreach($data as $transaksi): ?>
                                 <tr>
                                     <td></td>
@@ -36,6 +45,7 @@ $data = ambildata($conn,$query);
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>

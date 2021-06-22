@@ -9,4 +9,10 @@ if($exe){
     $message = 'Menghapus Data';
     $type = 'success';
     header('location: paket_index.php?crud='.$success.'&msg='.$message.'&type='.$type.'&title='.$title);
+} else {
+    $success = 'true';
+    $title = 'Gagal';
+    $message = 'Menghapus Data';
+    $type = 'failed';
+    header('location: paket_index.php?crud='.$success.'&msg='.$message.'&type='.$type.'&title='.$title);
 }
