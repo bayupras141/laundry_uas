@@ -14,7 +14,7 @@ function bisa($conn,$query){
 if(isset($_POST['submit'])){
     $nama     = $_POST['nama'];
     $username     = $_POST['username'];
-    $password = MD5($_POST['password']); 
+    $password = MD5($_POST['password']);
     $query = "INSERT INTO user (nama_user,username,password) values ('$nama','$username','$password')";
         
     $execute = bisa($conn,$query);
@@ -58,23 +58,23 @@ if(isset($_POST['submit'])){
     <body>
         <div class="container">
             <div class="title">Registrasi</div>
-            <form action="" method="post"> 
+            <form action="" method="POST"> 
                 <div class="user-detail">
                     <div class="input-box">
                         <span class="detail">Nama</span>
-                        <input name="nama" type="text" placeholder="Enter Your Name" required>
+                        <input name="nama" type="text" placeholder="Masukan nama" required>
                     </div>
                     <div class="input-box">
                         <span class="detail">Username</span>
-                        <input nama="username" type="text" placeholder="Enter Your username" required>
+                        <input name="username" type="text" placeholder="Masukan username" required>
                     </div>
                     <div class="input-box">
                         <span class="detail">Password</span>
-                        <input nama="password" type="password" placeholder="Enter Your password" required>
+                        <input name="password" type="password" placeholder="Masukan password" required>
                     </div> 
                 </div>
                 <div class="button">
-                    <input type="submit" name="submit" value="Register">
+                    <input type="submit" name="submit" value="registrasi">
                 </div>
             </form>
         </div>
