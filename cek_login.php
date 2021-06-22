@@ -10,7 +10,7 @@ $data = mysqli_fetch_assoc($row);
 $cek = mysqli_num_rows($row);
 
 
-if($cek > 0){
+if($cek > 0){ 
     $_SESSION['id_user'] = $data['id_user'];
     $_SESSION['username'] = $username;
     $_SESSION['nama_user'] = $data['nama_user'];

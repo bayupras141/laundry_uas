@@ -2,7 +2,13 @@
 
 session_start();
 	if($_SESSION['status']!="login"){
-		header("location:login.php?msg=Belum login");
+        
+        $success = 'true';
+        $title = 'Gagal';
+        $message = 'Login Gagal!';
+        $type = 'error';
+        header('location: login.php?msg='.$message.'&type='.$type.'&title='.$title);
+		// header("location:login.php?msg=Belum login");
 	}
 
 $conn = mysqli_connect('localhost','root','','uas_laundry');

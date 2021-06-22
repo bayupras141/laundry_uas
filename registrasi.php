@@ -21,9 +21,9 @@ if(isset($_POST['submit'])){
     if($execute == 1){
         $success = 'true';
         $title = 'Berhasil';
-        $message = 'Berhasil menambahkan data baru';
+        $message = 'Registrasi berhasil';
         $type = 'success';
-        header('location: login.php?crud='.$success.'&msg='.$message.'&type='.$type.'&title='.$title);
+        header('location: login.php?msg='.$message.'&type='.$type.'&title='.$title);
     }else{
         echo "Gagal Tambah Data";
     }

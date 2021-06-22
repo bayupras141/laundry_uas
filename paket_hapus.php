@@ -13,6 +13,6 @@ if($exe){
     $success = 'true';
     $title = 'Gagal';
     $message = 'Menghapus Data';
-    $type = 'failed';
+    $type = 'error';
     header('location: paket_index.php?crud='.$success.'&msg='.$message.'&type='.$type.'&title='.$title);
 }

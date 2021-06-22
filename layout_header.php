@@ -26,6 +26,9 @@
     <link href="assets/css/colors/default.css" id="theme" rel="stylesheet">
     <!-- DataTables -->
     <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css"/>
+    <!-- Alert -->
+    <script src="assets/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="assets/dist/sweetalert2.min.css">
 </head>
 
 <body class="fix-header">

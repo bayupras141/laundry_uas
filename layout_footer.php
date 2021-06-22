@@ -20,6 +20,7 @@
     <script src="assets/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
     <!-- Custom Theme JavaScript -->
+    <script src="assets/dist/sweetalert2.min.js"></script>
     <script src="assets/js/dashboard1.js"></script>
     <script src="assets/js/custom.min.js"></script>
     <script src="assets/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
@@ -63,19 +64,16 @@
     </script>
 
     <?php if($_GET['crud'] == 'true'):?>
+    
     <script type="text/javascript">
-        var title = "<?php echo $_GET['title']?>";
-        var msg = "<?php echo $_GET['msg']?>";
-        var type = "<?php echo $_GET['type']?>";
-        $.toast({
-             heading: title,
-             text: msg,
-             position: 'top-right',
-             loaderBg: '#fff',
-             icon: type,
-             hideAfter: 3500,
-             stack: 6
-         })
+        var type = "<?php echo $_GET['type']?>"
+        var title = "<?php echo $_GET['title']?>"
+        var msg = "<?php echo $_GET['msg']?>"
+        Swal.fire({
+            icon: type,
+            title: title,
+            text: msg,
+        })
     </script> 
     <?php endif; ?>
 </body>
